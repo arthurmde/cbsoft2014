@@ -1,10 +1,19 @@
 \section{Estudos e Resultados}
 \label{sec:studies}
 
-Primeiramente o foco foi em estudos com o objetivo de entender os conceitos relacionados a Design e Segurança de Software com o interesse em conceitos relacionados a características internas de software, principalmente ao código fonte. Depois, fizemos uma correlação entre esses dois conceitos, baseados na bibliografia pesquisada. Com esses conhecimentos defindos, fizemos um estudo sobre métricas a fim de mapear algumas métricas que pudessem caracterizar o código fonte em relação a design e vulnerabilida. Por fim, definimos cenários de decisão para auxiliar na tomada de descisão baseado em métricas e criamos alguns cenários para a tomada de decisão no contexto de segurança de software. O estudo feito será melhor detalhado nas subsessôes a seguir.
+PRECISA COLOCAR ALGUMA INTRODUCAO AQUI? pq ja foi explicado de certa forma como dirigimos os estudos na metodologia...
 
 \subsection{\emph{Design} de Software}    
 \subsection{Segurança de Software}
+
+A segurança de software está relacionada com o contínuo processo de manter a confidencialidade, integridade e disponibilidade nas diversas camadas que o compõe, sendo considerado parte dos requisitos não-funcionais do sistema. Aggarwal e colaboradores (\cite{aggarwal2002}) cita que o custo e esforço gastos na segurança do software são bem altos, podendo chegar a 70\% to esforço total de desenvolvimento e suporte do software.
+
+Formalmente, uma vulnerabilidade pode ser definida como uma instância de uma falha na especificação, desenvolvimento ou configuração do software de tal forma que a sua execução pode violar políticas de segurança, implícita ou explícita \cite{krsul1998}.Vulnerabilidades podem ser maliciosamente exploradas para permitir acesso não autorizado, modificações de privilégios e negação de serviço. A exploração maliciosa de vulnerabilidades em grade parte são realizadas através de \emph{Exploits}, ferramentas ou scripts desenvolvidos para este propósito, que se baseiam extensivamente nas vulnerabilidades mais comuns tal como \emph{buffer-overflow}. 
+
+Vulnerabilidades de software são, na maior parte das vezes, causadas pela falta ou imprópria validação das entradas realizadas pelo usuário. Essas condições indesejáveis são usadas por usuários maliciosos para injetar falhas e códigos no sistema que os permitam executar seus próprios códigos e aplicações  \cite{jimenez2009}. McGraw e colaboradores (\cite{mcgraw2004}) afirmam que 50\% dos problemas de segurança surgem no nível de \emph{design}. Dessa forma, assim como os desenvolvedores programam aplicando ao código princípios de \emph{design}, devem evoluir o código aplicando princípios de \emph{design} seguro tais quais os apresentados por outros trabalhos \cite{saltzer1975} \cite{bishop2003} \cite{mcgraw2002} \cite{a1lshammari2009}.
+
+Além disso, o número de vulnerabilidades cresce com o passar do tempo, e é de grande importância que o Engenheiro conheça os principais problemas e como os atacantes utilizam desses problemas para explorar o software. A iniciativa CWE\footnote{\url{http://cwe.mitre.org/about/sources.html}} oference grande apoio neste sentido pois tem como objetivo estabelecer uma linguagem comum para descrever vulnerabilidades de software no \emph{design}, arquitetura ou no código; servir de base para ferramentas de análise de cobertura de segurança de código, dessa forma é possivel saber quais vulnerabilidades as ferramentas conseguem capturar; e prover uma base de informações padrão a respeito de como identificar, mitigar e previnir uma certa vulnerabilidade.
+
 \subsection{Unindo Conceitos de Segurança e \emph{Desgin}}
 \subsection{Métricas}
 
