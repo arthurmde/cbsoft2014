@@ -1,13 +1,15 @@
-all: bib tex
-	pdflatex article.tex
-	evince article.pdf &
+TARGET=article
 
-bib: article.bib
-	pdflatex article.tex
-	bibtex article
+all: $(TARGET).tex
+	pdflatex $(TARGET).tex
+	bibtex $(TARGET)
+	pdflatex $(TARGET).tex
+	pdflatex $(TARGET).tex
+	evince $(TARGET).pdf &
 
-tex: article.tex
-	pdflatex article.tex
+edit:
+	gedit Makefile *.bib *.tex &
 
 clean:
-	rm *.bbl *.aux *.blg *.log *.pdf
+	rm -f $(TARGET).pdf *.aux *.log *.blg *.bbl *.dvi *.ps *.toc *.lot *.lof *.idx *~
+
