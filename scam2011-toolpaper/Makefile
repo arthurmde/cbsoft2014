@@ -1,4 +1,4 @@
-TARGET=kalibro
+TARGET=article
 
 all: $(TARGET).tex
 	pdflatex $(TARGET).tex
