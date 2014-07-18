@@ -33,7 +33,39 @@ Os cuidados com o bom design do código-fonte são fundamentais para o desenvolv
 
 % todo não teremos espaços
 
+
 %\subsection{Cenários De Decisão}
 Explicar oq é um cenário e colocar tabela resumo (se der)
 
+
+O objetivo da definição de Cenários é minimizar as principais dificuldades existentes na medição do código-fonte, como a escolha de métricas, interpretação de valores, redundância de métricas e interpretaçoes isoladas.
+
+Para tanto, foi proposta uma estrutura de composição de cenários que visam nomear e mapear estados observáveis através de métricas de código-fonte que indicam a existência de determinada característica dentro do software, classe ou método. A estrutura dos cenários consistem em:
+\begin{itemize}
+\item \textbf{Nome}: Identificação única do cenário
+\item \textbf{Métricas Envolvidas}: Métricas necessárias para a caracterização do cenário
+\item \textbf{Nível}: Abstração envolvida (projeto, classe, método)
+\item \textbf{Descrição}: Discuti os problemas, princípios envolvidos e a caracterização
+\item \textbf{Caracterização com Métricas}: Define e discuti como as métricas envolvidas devem ser utilizadas para identificar o cenário
+\item \textbf{Ações Sugeridas}: Propõe um conjunto de ações específicas tais como uma refatoração, a utilização de um padrão de projeto, prática e aplicação de princípios
+\end{itemize}
+
+Com os Cenários de Decisões introduzimos um novo conceito a ser utilizado na medição de software. Espera-se que o esforço destinado a medição de software em um projeto seja concentrado sobre a instanciação desses cenários, diminuindo-se o esforço necessário para coleta, interpretação e visualização de dados. Entretanto, os benefícios dos Cenários de Decisões são passíveis de experimentação, experimentos esses que estão fora do escopo deste trabalho, neste momento, 
+em que apenas concebemos um conjunto inicial de cenários.
+
+\begin{table}[H]
+		\begin{center}
+	    \begin{tabular}{ | p{2cm}  |p{4,5cm} |}
+	    \hline
+	    \textbf{Cenário} & Ponto Crítico de Falha \\ 	\hline
+	    \textbf{Caracterização} & Qualidade de código \\ 	\hline
+	    \textbf{Nível} & Classe \\ 	\hline
+	    \textbf{Descrição} & Este cenário busca identificar classes muito acopladas, que representam pontos críticos da aplicação \\ \hline
+	    \textbf{Caracterização} & Alto valor de ACC+NOC \\ 	\hline
+	    \textbf{Ações Sugeridas} & \textbf{Refatorações}: Extract Class, Move Method, Push Down Method; \textbf{Aplicar Princípios}:Modularização, Baixo Acoplamento; Princípio de Encapsulamento; Princípios de Distribuição de Responsabilidades GRASP \\ 	\hline
+	    \end{tabular}
+		    \caption{Exemplo de cenário}
+		    \label{tab:resumo2}
+		\end{center}
+	\end{table}
 
