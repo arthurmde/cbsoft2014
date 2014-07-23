@@ -2,45 +2,24 @@
 \label{sec:studies}
 % Não precisa de introdução e nem de subseção para ganharmos espaço
 
+Iniciamos nossas pesquisas com a busca dos conceitos sobre \emph{design} e segurança de software.
 
 % Design de Software------------------------------------------------------------
 
 %TODO: 1 parágrafo
+O \emph{design}....
 
 %Segurança de Software ---------------------------------------------------------
 
 %TODO: reduzir tudo em um parágrafo
 
-A segurança de software está relacionada com o contínuo processo de manter a confidencialidade, integridade e disponibilidade nas diversas camadas que o compõe, sendo considerado parte dos requisitos não-funcionais do sistema. Aggarwal e colaboradores (\cite{aggarwal2002}) cita que o custo e esforço gastos na segurança do software são bem altos, podendo chegar a 70\% to esforço total de desenvolvimento e suporte do software.
-
-Formalmente, uma vulnerabilidade pode ser definida como uma instância de uma falha na especificação, desenvolvimento ou configuração do software de tal forma que a sua execução pode violar políticas de segurança, implícita ou explícita \cite{krsul1998}.Vulnerabilidades podem ser maliciosamente exploradas para permitir acesso não autorizado, modificações de privilégios e negação de serviço. A exploração maliciosa de vulnerabilidades em grade parte são realizadas através de \emph{Exploits}, ferramentas ou scripts desenvolvidos para este propósito, que se baseiam extensivamente nas vulnerabilidades mais comuns tal como \emph{buffer-overflow}. 
-
-Vulnerabilidades de software são, na maior parte das vezes, causadas pela falta ou imprópria validação das entradas realizadas pelo usuário. Essas condições indesejáveis são usadas por usuários maliciosos para injetar falhas e códigos no sistema que os permitam executar seus próprios códigos e aplicações  \cite{jimenez2009}. McGraw e colaboradores \cite{mcgraw2004} afirmam que 50\% dos problemas de segurança surgem no nível de \emph{design}. Dessa forma, assim como os desenvolvedores programam aplicando ao código princípios de \emph{design}, devem evoluir o código aplicando princípios de \emph{design} seguro tais quais os apresentados por outros trabalhos \cite{saltzer1975} \cite{bishop2003} \cite{mcgraw2002} \cite{a1lshammari2009}.
-
-Além disso, o número de vulnerabilidades cresce com o passar do tempo, e é de grande importância que o Engenheiro conheça os principais problemas e como os atacantes utilizam desses problemas para explorar o software. A iniciativa CWE\footnote{\url{http://cwe.mitre.org/about/sources.html}} oference grande apoio neste sentido pois tem como objetivo estabelecer uma linguagem comum para descrever vulnerabilidades de software no \emph{design}, arquitetura ou no código; servir de base para ferramentas de análise de cobertura de segurança de código, dessa forma é possivel saber quais vulnerabilidades as ferramentas conseguem capturar; e prover uma base de informações padrão a respeito de como identificar, mitigar e previnir uma certa vulnerabilidade.
-
-% Unindo Conceitos de Segurança e Desgin ---------------------------------------
-
-Com os estudos sobre conceituação de vulnerabilidades conhecidas, de princípios de \emph{design} seguro e da revisão bibliográfica, verificamos uma forte relação entre princípios de \emph{design} de software com os princípios de \emph{design} seguro, onde a aplicação de ambos podem prover softwares mais robustos, extensíveis e seguros. 
-%
-Khan \& Khan \cite{khan2010} enfatizam que a complexidade é o maior desafio para desenvolvedores de software ao projetarem um produto de qualidade que cubra ao máximo aspectos de segurança. A complexidade é um dos principais problemas que afetam a qualidade interna do software, dificultando principalmente a manutenção e evolução do software.
-%
-Mesmo a complexidade sendo uma propriedade da essência do software e não acidental, conforme afirmado por Brook \cite{brooks1986}, é importante que os desenvolvedores cuidem da complexidade de seus códigos, pois estes esforços reduzem os impactos negativos diretos sobre a estrutura interna do software assim como na segurança do mesmo. Para tanto, faz-se necessário a aplicação dos princípios de bom \emph{design} e de princípios de \emph{design} seguro através, por exemplo, da prática de \emph{refactorings} e aplicação de padrões de projeto.
-%
-Os cuidados com o bom design do código-fonte são fundamentais para o desenvolvimento de códigos seguros. Entretanto, ações específicas devem ser realizadas com objetivos de tratar especificamente das vulnerabilidades inerentes ao código produzido.
-
-%\subsection{Métricas}
-
-% todo não teremos espaços
+A segurança de software está relacionada com o contínuo processo de manter a confidencialidade, integridade e disponibilidade nas diversas camadas que o compõe. Vulnerabilidades podem ser exploradas de maneira maliciosa para permitir acesso não autorizado, modificações de privilégios e negação de serviço. McGraw e colaboradores \cite{mcgraw2004} afirmam que 50\% dos problemas de segurança surgem no nível de \emph{design}. Dessa forma, assim como os desenvolvedores programam aplicando ao código princípios de \emph{design}, devem evoluir o código aplicando princípios de \emph{design} seguro tais quais os apresentados por outros trabalhos \cite{saltzer1975} \cite{bishop2003} \cite{mcgraw2002}. E no meio de uma gama de vulnerabilidades existentes, iniciativas como a CWE\footnote{\url{http://cwe.mitre.org/about/sources.html}} provem uma base de informações padrão que ajudam os Engenheiros de Software a identificar, mitigar e previnir uma certa vulnerabilidade.
 
 
-%\subsection{Cenários De Decisão}
-Explicar oq é um cenário e colocar tabela resumo (se der)
+Com os estudos verificamos uma forte relação entre princípios de \emph{design} de software com os princípios de \emph{design} seguro, onde a aplicação de ambos podem prover softwares mais robustos, extensíveis e seguros. Os cuidados com o bom design do código-fonte são fundamentais para o desenvolvimento de códigos seguros. Para tanto, faz-se necessário a aplicação dos princípios de bom \emph{design} e de princípios de \emph{design} seguro através, por exemplo, da prática de \emph{refactorings} e aplicação de padrões de projeto. Neste sentido, o monitoramento do código fonte pode ser utilizado para apoiar a utillização de tecnicas que buscam aplicar os princípios citados e este monitoramento pode ser feito com o auxílio de métricas de código fonte.
 
 
-O objetivo da definição de Cenários é minimizar as principais dificuldades existentes na medição do código-fonte, como a escolha de métricas, interpretação de valores, redundância de métricas e interpretaçoes isoladas.
-
-Para tanto, foi proposta uma estrutura de composição de cenários que visam nomear e mapear estados observáveis através de métricas de código-fonte que indicam a existência de determinada característica dentro do software, classe ou método. A estrutura dos cenários consistem em:
+Com o objetivo de minimizar as principais dificuldades existentes na medição de código fonte, como a escolha de métricas, interpretação de valores, redundância de métricas e interpretaçoes isoladas, buscamos definir o conceito de Cenários de Decisão. Os Cenários de Decisão  visam nomear e mapear estados observáveis através de métricas de código-fonte que indicam a existência de determinada característica dentro do software, classe ou método. A estrutura dos cenários consistem em:
 \begin{itemize}
 \item \textbf{Nome}: Identificação única do cenário
 \item \textbf{Métricas Envolvidas}: Métricas necessárias para a caracterização do cenário
@@ -50,22 +29,8 @@ Para tanto, foi proposta uma estrutura de composição de cenários que visam no
 \item \textbf{Ações Sugeridas}: Propõe um conjunto de ações específicas tais como uma refatoração, a utilização de um padrão de projeto, prática e aplicação de princípios
 \end{itemize}
 
-Com os Cenários de Decisões introduzimos um novo conceito a ser utilizado na medição de software. Espera-se que o esforço destinado a medição de software em um projeto seja concentrado sobre a instanciação desses cenários, diminuindo-se o esforço necessário para coleta, interpretação e visualização de dados. Entretanto, os benefícios dos Cenários de Decisões são passíveis de experimentação, experimentos esses que estão fora do escopo deste trabalho, neste momento, 
-em que apenas concebemos um conjunto inicial de cenários.
+A proposta dessa estrutura de cenários de decisões tem como principal objetivo abstrair a escolha e interpretações de métricas de código-fonte, reduzindo erros e potencializando o uso de métricas para tomada de decisões em projetos. Neste sentido, projetos podem utilizar cenários de referência ou até mesmo definir novos cenários de acordo com parâmetros de qualidade do projeto. Dentro da primeira etapa de desenvolvimento desse trabalho, baseado nos estudos e relações existentes sobre \emph{design} e vulnerabilidades de software, definimos um conjunto de cenários que visam identificar características de software relacionado à violações de princípios de segurança e presença de vulnerabilidades. A seguir apresentamos uma tabela com resumo dos cenários criados.
 
-\begin{table}[H]
-		\begin{center}
-	    \begin{tabular}{ | p{2cm}  |p{4,5cm} |}
-	    \hline
-	    \textbf{Cenário} & Ponto Crítico de Falha \\ 	\hline
-	    \textbf{Caracterização} & Qualidade de código \\ 	\hline
-	    \textbf{Nível} & Classe \\ 	\hline
-	    \textbf{Descrição} & Este cenário busca identificar classes muito acopladas, que representam pontos críticos da aplicação \\ \hline
-	    \textbf{Caracterização} & Alto valor de ACC+NOC \\ 	\hline
-	    \textbf{Ações Sugeridas} & \textbf{Refatorações}: Extract Class, Move Method, Push Down Method; \textbf{Aplicar Princípios}:Modularização, Baixo Acoplamento; Princípio de Encapsulamento; Princípios de Distribuição de Responsabilidades GRASP \\ 	\hline
-	    \end{tabular}
-		    \caption{Exemplo de cenário}
-		    \label{tab:resumo2}
-		\end{center}
-	\end{table}
+Por fim, na primeira etapa dessa monografia, contribuímos tecnicamente com dois projetos de software livre que fazem parte do contexto deste trabalho: o Mezuro\footnote{\url{http://mezuro.org/}} e Analizo\footnote{\url{http://analizo.org/}}. Os objetivos dessas contribuições foi compreender a arquitetura desses projetos para proporcionar evoluções que contemplem a utilização de cenários e a coleta e apresentação de novas métricas de vulnerabilidades.
+
 
