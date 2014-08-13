@@ -17,16 +17,16 @@ Com o objetivo de minimizar as principais dificuldades existentes na medição d
 \end{itemize}
 
 
-Neste sentido, projetos podem utilizar cenários de referência ou até mesmo definir novos cenários de acordo com parâmetros de qualidade do projeto. Dentro da primeira etapa de desenvolvimento desse trabalho, baseado nos estudos e relações existentes sobre \emph{design} e vulnerabilidades de software, definimos um conjunto de cenários que visam identificar características de software relacionado à violações de princípios de segurança e presença de vulnerabilidades. Nos cenários propostos, podemos notar que alguns cenários podem conter apenas métricas de \emph{design} e mesmo assim determinar uma vulnerabilidade. Por outro lado, outros cenários podem ser compostos apenas com métricas de segurança. Neste ultimo caso, notamos que algumas métricas específicas de segurança podem compor por si só um cenários de decisão, dado o fato de que métricas de segurança já indicam pontualmente uma situação de vulnerabilidade.
+Neste sentido, projetos podem utilizar cenários de referência ou até mesmo definir novos cenários de acordo com parâmetros de qualidade do projeto. Dentro da primeira etapa de desenvolvimento desse trabalho, baseado nos estudos e relações existentes sobre \emph{design} e vulnerabilidades de software, definimos um conjunto de cenários que visam identificar características de software relacionado à violações de princípios de segurança e presença de vulnerabilidades. Nos cenários propostos, observamos que alguns cenários podem conter apenas métricas de \emph{design} e mesmo assim determinar uma vulnerabilidade, como o cenário \"Ponto Crítico de Falha\" mostrado na tabela \ref{tab:resumo2}. Por outro lado, outros cenários podem ser compostos apenas com métricas de segurança, como o caso do cenário \"Variáveis não inicializadas\". Neste ultimo caso, notamos que algumas métricas específicas de segurança podem compor por si só um cenários de decisão, pois estas já indicam pontualmente uma situação de vulnerabilidade.
 
-	\begin{table}[H]
+	\begin{table}[h!]
 		\begin{center}
 	    \begin{tabular}{ |p{2cm}| p{3cm} | p{2cm} |}
 	    \hline
 	    \textbf{Cenário} & \textbf{Caracterização} & \textbf{Caracterização} \\
 	      & \textbf{do cenário}  & \textbf{com Métricas}  \\ 	\hline
 	    
-	    Ponto Crítico de Falha & Este cenário busca identificar classes muito acopladas, que representam pontos críticos da aplicação & Alto valor de ACC+NOC \\
+	    Ponto Crítico de Falha & Identificar classes muito acopladas, que representam pontos críticos da aplicação & Alto valor de ACC+NOC \\
 	 \hline
 	    Variáveis não inicializadas  & Variáveis não inicializadas podem causar falha da aplicação ou acesso não autorizado de informações caso sejam utilizadas & Ao menos uma ocorrência da métrica UAV  \\ \hline
 
@@ -36,5 +36,4 @@ Neste sentido, projetos podem utilizar cenários de referência ou até mesmo de
 		\end{center}
 	\end{table}
 
-	
 Por fim, na primeira etapa dessa monografia, contribuímos tecnicamente com dois projetos de software livre que fazem parte do contexto deste trabalho: o Mezuro\footnote{\url{http://mezuro.org/}} e Analizo\footnote{\url{http://analizo.org/}}, que é um dos extratores utilizados pelo Mezuro. Os objetivos dessas contribuições foi compreender a arquitetura desses projetos para proporcionar evoluções que contemplem a utilização de cenários e a coleta e apresentação de novas métricas de vulnerabilidades.
