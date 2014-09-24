@@ -1,5 +1,5 @@
 LATEX = pdflatex
-TARGET = CBSoft2011-FLOSS
+TARGET = CBSoft2014-FLOSS
 
 all: $(TARGET).tex 
 	$(LATEX) $<
