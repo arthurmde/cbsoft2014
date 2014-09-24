@@ -63,91 +63,63 @@ vulnerabilidades para tomada de decisões}
             % ---------------------------------------------------------%
             % fill each column with content
 %\vfill
-\begin{block}{Software Engineering research}
-  \begin{itemize}
-	\item Advancing our understanding of the process of software development
-              and its outcomes
-        \item Should be based on the study of existing real-world software
-        \item FLOSS offers SE researchers the opportunity of basing their
-              research on abundant and publicly available data, freely accessible
-              data analysis, and software
+\begin{block}{Resumo}
 
-        \begin{itemize}
-	      \item These are basic building blocks for reproducible and
-                    extensible science
-        \end{itemize}
-  \end{itemize}              
+Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusão de Curso de Engenharia de Software da UnB. Assim, é explorada a importância da utilização de métricas estáticas de código-fonte para suportar a tomada de decisões, tanto a nível técnico quanto gerencial a respeito do design e segurança do software. Além disso, é proposta uma nova técnica para realizar medições que será viabilizada a partir da evolução de duas ferramentas de monitoramento de código-fonte.
+
 \end{block}
 
 %-------------------------------------------------------------------------------
 \vfill
-\begin{block}{Why FLOSS?}
+\begin{block}{Design, Segurança e Métricas de Software}
 	\begin{itemize}
-		\item Based on a collaborative, efficient, and open development process
+		\item Qualidade interna é um dos principais fatores de sucesso de projetos de software
+		
+		\begin{itemize}
+			\item Mais testes automatizados
+			\item Legibilidade e compreensão
+			\item Reduzem riscos de inserção de \emph{bugs}
+			\item Aumentam as oportunidades de encontrar e tratar vulnerabilidades
+		\end{itemize}
 
-		\item Allows users to use, study, modify, and redistribute the software
+		\item 80\% das vulnerabilidades exploráveis estão ligadas à má codificação segundo o estudo ICAT/NIST (2005)
+%\footnote{ICAT foi um motor de busca de vulnerabilidades, desenvolvido pelo NIST(National Institue of Standards and Technology). O ICAT foi substituido pelo NVD (National Vulnerability Database) - \url{http://nvd.nist.gov/}}
 
-		\item Centered around some publicly-accessible source code 
+		\item A qualidade interna do software está, portanto, relacionado a sua segurança. A aplicação de princípios de segurança podem envolver a aplicação de princípios de \emph{design}. Assim, a aplicação de práticas e técnicas de \emph{design} são fundamentais para o desenvolvimento de códigos seguros.
+	
+		\item A medição pode ser utilizada como ferramenta para apoiar o acompanhamento e tomada de decisões sobre a segurança e qualidade interna, através de indicadores e metas que indiquem oportunidades de melhorias.
 
-		\item Benefits from social, ethical, technical, and economic
-                      points of view
-		\item Source code access and sharing eases learning and promotes
-                      participation in the development of software
-		\item Development model that may result in high quality code that
-                      gets adapted quickly to different situations with lower
-                      direct costs
-	\end{itemize}
+		\begin{figure}
+	  		\begin{center}
+	    		\includegraphics[scale=1.2]{DesignAgilComMedicao.png}
+	    		\caption{Proposta de uso de métricas como práticas ágeis}
+	    		\label{fig:background:metrics-practises}
+	  		\end{center}
+		\end{figure}
 
-	\begin{figure}
-	  \begin{center}
-	    \includegraphics[scale=.95]{repository-interaction.png}
-	    \caption{FLOSS development by means of a VCS repository}
-	    \label{fig:background:free-software-repository}
-	  \end{center}
-	\end{figure}
-
-
-        \begin{itemize}
-		\item Source code availability: projects have a publicly-accessible version control repository
-		\item User/developer symbiosis: the developers are also users of the software, and they
-    also provide requirements
-		\item Non-contractual work: there is no central management with control over all of the
-    developers' activities
-		\item Work is self-assigned: volunteer developers tend to work on the parts of
-    the project that most appeal to them, and employed developers will
-    work on the parts that are of most interest to their employers
-		\item Geographical Distribution: in most FLOSS
-    projects the developers are spread among several different locations
-    in the world
+		\item Dificuldades: grande quantidade de métricas, coletas manuais, poucos recursos de visualização, dificuldades de compreensão de valores, interpretações errôneas e uso de métricas isoladas.
 	\end{itemize}
 \end{block}
 
 
 %-------------------------------------------------------------------------------
 \vfill
-\begin{block}{Opportunities}
+\begin{block}{Cenários de Decisão}
 	\begin{itemize}
-		\item Using FLOSS for SE Education
-		\begin{itemize}
-			\item Involving students and faculty in large-scale FLOSS projects to provide them with real-world experience
-			\item FLOSS promotes project- and problem-based learning, developers/students work on projects that interest them
-			\item FLOSS is normally highly modular and APIs are well documented, for teaching principles and good practices
-			\item Provides quantitative data from real and freely available source code on which to perform analysis and base decisions
+		\item Os Cenários de Decisão visam nomear e mapear estados observáveis através de métricas de código-fonte que indicam a existência de determinada característica dentro do software, classe ou método, potencializando o uso
+		de métricas para tomada de decisões em projetos. A estrutura dos cenários consistem em:
 
-		\end{itemize}
-		\item Using data from FLOSS projects in SE Research
 		\begin{itemize}
-			\item The social structure of development communities
-			\item Communication and workflow patterns in FLOSS projects
-			\item Developer evolution and participation
-			\item Attractiveness of FLOSS projects
-			\item Attributes of the source code and their impact on project success
+			\item \textbf{Nome}: Identificação única do cenário
+			\item \textbf{Métricas Envolvidas}: Métricas necessárias para a caracterização do cenário
+			\item \textbf{Nível}: Abstração envolvida (projeto, classe, método)
+			\item \textbf{Descrição}: Discuti os problemas, princípios envolvidos e a caracterização
+			\item \textbf{Caracterização com Métricas}: Define e discuti como as métricas envolvidas devem ser utilizadas para identificar o cenário
+			\item \textbf{Ações Sugeridas}: Propõe um conjunto de ações específicas tais como uma refatoração, a utilização de um padrão de projeto, prática e aplicação de princípios
 		\end{itemize}
-		\item FLOSS software products in research activities
-		\begin{itemize}
-			\item Releasing the source of software produced in research activities meets the basic scientific principle of reproducibility
-			\item Being open source allows research prototypes to be enhanced into production-class products without the researchers having to be involved forever
-		\end{itemize}
+
+		\item Neste sentido, projetos podem utilizar cenários de referência ou até mesmo definir novos cenários de acordo com parâmetros de qualidade do projeto.
+
 	\end{itemize}
 \end{block}
 
