@@ -65,7 +65,7 @@ vulnerabilidades para tomada de decisões}
 %\vfill
 \begin{block}{Resumo}
 
-Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusão de Curso de Engenharia de Software da UnB. Assim, é explorada a importância da utilização de métricas estáticas de código-fonte para suportar a tomada de decisões, tanto a nível técnico quanto gerencial a respeito do design e segurança do software. Além disso, é proposta uma nova técnica para realizar medições que será viabilizada a partir da evolução de duas ferramentas de monitoramento de código-fonte.
+Neste trabalho é explorada a importância da utilização de métricas estáticas de código-fonte para suportar a tomada de decisões, tanto a nível técnico quanto gerencial a respeito do design e segurança do software. Além disso, é proposta uma nova técnica para realizar medições que será viabilizada a partir da evolução de duas ferramentas de monitoramento de código-fonte.
 
 \end{block}
 
@@ -85,7 +85,7 @@ Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusã
 		\item 80\% das vulnerabilidades exploráveis estão ligadas à má codificação segundo o estudo ICAT/NIST (2005)
 %\footnote{ICAT foi um motor de busca de vulnerabilidades, desenvolvido pelo NIST(National Institue of Standards and Technology). O ICAT foi substituido pelo NVD (National Vulnerability Database) - \url{http://nvd.nist.gov/}}
 
-		\item A qualidade interna do software está, portanto, relacionado a sua segurança. A aplicação de princípios de segurança podem envolver a aplicação de princípios de \emph{design}. Assim, a aplicação de práticas e técnicas de \emph{design} são fundamentais para o desenvolvimento de códigos seguros.
+		\item A qualidade interna do software está, portanto, relacionado a sua segurança. A aplicação de princípios de segurança podem envolver a aplicação de princípios de \emph{design}. A aplicação de práticas e técnicas de \emph{design} são fundamentais para o desenvolvimento de códigos seguros.
 	
 		\item A medição pode ser utilizada como ferramenta para apoiar o acompanhamento e tomada de decisões sobre a segurança e qualidade interna, através de indicadores e metas que indiquem oportunidades de melhorias.
 
@@ -118,7 +118,7 @@ Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusã
 			\item \textbf{Ações Sugeridas}: Propõe um conjunto de ações específicas tais como uma refatoração, a utilização de um padrão de projeto, prática e aplicação de princípios
 		\end{itemize}
 
-		\item Neste sentido, projetos podem utilizar cenários de referência ou até mesmo definir novos cenários de acordo com parâmetros de qualidade do projeto.
+		\item Projetos podem utilizar cenários de referência ou até mesmo definir novos cenários de acordo com parâmetros de qualidade do projeto.
 
 	\end{itemize}
 \end{block}
@@ -143,10 +143,17 @@ Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusã
         % ---------------------------------------------------------%
         % fill each column with content
 
-        \begin{block}{Unindo Conceitos de Design e Segurança de Software}
+        \begin{block}{Formação de Cenários de Design e Segurança}
 
         	\begin{itemize}
-				\item A complexidade é o maior desafio para desenvolvedores de software ao projetarem um produto de qualidade que cubra ao máximo aspectos de segurança. É um dos principais problemas que afetam a qualidade interna do software, dificultando principalmente a manutenção e evolução do software.
+        		\item Verificou-se uma forte relação entre princípios de design de software com os princípios de design seguro, onde a aplicação de ambos podem prover softwares mais robustos, extensíveis e seguros. 	
+
+        		\item Vulnerabilidades específicas são difíceis de se encontrar, exigindo o conhecimento do profissional a respeito dessa vulnerabilidade. Porém, mesmo com tal conhecimento, a identificação dessas vulnerabilidades em um código com "mau" design torna-se uma tarefa muito difícil.
+
+        		\item Os cuidados com o bom design do código-fonte são fundamentais para o desenvolvimento de códigos seguros, podendo ser realizados através, por exemplo, da prática de refactorings e aplicação de padrões de projeto e não somente através do tratamento de vulnerabilidades específicas.
+
+
+				\item A complexidade, por exemplo, é uma característica de design que está diretamente relacionada com a segurança. É um dos principais problemas que afetam a qualidade interna do software, dificultando principalmente a manutenção e evolução do software, aumentando riscos de inserção de bugs e vulnerabilidades e dificultando o tratamento dos mesmos. Características que podem indicar complexidade:
 					\begin{itemize}
 						\item Grande número de métodos, de filhos e de métodos públicos de uma classe
 						\item Árvores de herança profundas
@@ -154,13 +161,12 @@ Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusã
 						\item Baixa Coesão
 					\end{itemize}
 
-				\item O baixo nível de encapsulamento provê diferentes formas de interações entre objetos,  implicando que mais verificações de acesso ao objeto deve ser feita (Princípio \emph{Mediate Completely})
-				\item O encapsulamento também ajuda a diminuir a complexidade do código, pois a redução de métodos de acesso diminui as opções de interação de objetos, tornando a API mais simples. Isso também se aplica a quantidade de parâmetros.
-				\item Vulnerabilidades específicas são difíceis de se encontrar, exigindo o conhecimento do profissional a respeito dessa vulnerabilidade. Porém, mesmo com tal conhecimento, a identificação dessas vulnerabilidades em um código com \"mau\" emph{design} torna-se uma tarefa muito difícil.
+				\item A utilização de métricas de código-fonte e de vulnerabilidades podem auxiliar o desenvolvimento de softwares mais robustos.
+
+				\item A partir do estudo de relação entre design e segurança, foi proposto um conjunto de Cenários de Decisão voltados principalmente para caracterizar problemas de segurança em projetos de software.
 
         	\end{itemize}
         \end{block}
-
 
 		\vfill
 		\begin{block}{Cenários de Decisões no Contexto de Segurança de Software}
@@ -169,6 +175,17 @@ Neste texto apresentamos os resultados intermediários de um Trabalho de Conclusã
 
 		\vfill
 		\begin{block}{Trabalhos Futuros}
+
+		\begin{itemize}
+        		\item Implementação de Cenários de Decisões na plataforma livre de monitoramento de código fonte Mezuro e em um ambiente de Data Warehousing.
+
+        		\item Criar configurações nas duas ferramentas para viabilizar a utilização dos cenários de segurança propostos.
+
+        		\item Estudo de correlação estatística entre métricas de design e de segurança a partir da análise de softwares livres para apoiar cientificamente a concepção de novos cenários de referência.
+
+        		\item Propor novos Cenários de Decisão.
+
+        	\end{itemize}
 
 		\end{block}
 
