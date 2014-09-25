@@ -171,6 +171,57 @@ Neste trabalho é explorada a importância da utilização de métricas estáticas de 
 		\vfill
 		\begin{block}{Cenários de Decisões no Contexto de Segurança de Software}
 
+		\begin{table}[H]
+		\begin{center}
+	    \begin{tabular}{ |p{7cm}| p{8cm}  | p{20cm}  |}
+	    %\begin{tabular}{ |l|l|l|l|}
+	    \hline
+	    \textbf{Cenário} & \textbf{Caracterização} & \textbf{Ações} \\
+	                     & \textbf{com Métricas}   &\textbf{Sugeridas}\\ 
+	                     &   &\\ \hline
+
+	   
+
+	   %Cenario   & Descrição           	& Métricas 		& Acoes   						   \\                        
+	    %  		 &            			& envolvidas   	& 		 						   \\ \hline              
+	   
+	   %Ponto     & Este cenário busca 	& Alto valor de & Refatorações: Extract Class,     \\
+	   %Critico   & identificar		 	& ACC+NOC 		& Move Method, Push Down Method;   \\
+	   %de Falha  &  				    &		       	& Aplicar Princípios: Modularização\\
+	   %          &                      &              	& Baixo Acoplamento; Princípio de  \\
+	%		     &                      &             	& Encapsulamento; Princípios de    \\
+	%			 &						&				& Distribuiçãode Responsabilidades \\
+	%			 &						&				& GRASP \\ \hline
+	%	%--------------------------------------------------------------------------------------
+	 %  Alta Super-&						&				& GRASP                            \\
+	  % cie de Ataque a Atributos Internos & Qualidade de código			 &						&				& GRASP                            \\
+				 %&						&				& GRASP                            \\
+				 %&						&				& GRASP                            \\
+				 %&						&				& GRASP                            \\
+				 %&						&				& GRASP                            \\
+				 %&						&				& GRASP                            \\
+%
+
+
+Alta Superfície de Ataque a Atributos Internos & Valor alto de NPA/NOA &  \textbf{Refatorações}: Encapsulate Field;     \textbf{Aplicar Princípios}:Redução da superfície de ataque, Princípio de encapsulamento \\ \hline
+
+Alta Superfície de Ataque Operacional & Valor alto de número NPM e MNPM & \textbf{Refatorações}: Hide Method; Remove Parameter; \textbf{Aplicar Princípios}:Princípio de Encapsulamento; \textbf{Aplicar padõres}: Padrão facade\\ \hline
+
+Ponto Crítico de Falha & Alto valor de ACC+NOC & \textbf{Refatorações}: Extract Class; \textbf{Aplicar Princípios}:Princípios de Distribuição de Responsabilidades GRASP \\ \hline 
+
+Confidencia- lidade Ameaçada & Valor acima do aceitavel de OBAA + DUPV & garantir o range de acesso de um array, realizando verificações do índice de acesso antes de acessar o valor da variável.\\ \hline
+
+Uso de Variáveis não inicializadas & Valor acima do aceitavel de AUV + UAV + ROGU & Inicializar variáveis no momento que foram instanciadas, ou garantir que a variavel será preenchida antes de ser usada. \\
+
+	 \hline
+	    %& Vulnerabilidade específica & Método & Busca indentificar a não ocorrencia de validação de variáveis de entrada por outros mecanismos e também pelo uso da função \emph{gets} & Ao menos uma ocorrência da métrica FGBO ou AUV & Implementar mecanismos validação de entrada de usuário ; substituir função \emph{gets} pela \emph{fgets} \\ \hline
+	    %Variáveis não inicializadas  & Vulnerabilidade específica & Método & Variáveis não inicializadas podem causar falha da aplicação ou acesso não autorizado de informações caso sejam utilizadas & Ao menos uma ocorrência da métrica UAV & Inicializar variáveis sempre que criar uma\\ \hline
+
+	    \end{tabular}
+		    \caption{Parte II - Resumo de todos os cenários}
+		    \label{tab:resumo2}
+		\end{center}
+	\end{table}
 		\end{block}
 
 		\vfill
